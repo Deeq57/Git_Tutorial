@@ -158,3 +158,88 @@ git config --global alias.s "status" == git s
 ```
 
 1. git s = git status
+
+## Uploading Code to GitHub
+
+Link a local repository to a remote repository and
+give a name for this link
+
+```
+git remote add <remote_name> <url>
+```
+
+List all remote repositories that are linked
+
+```
+git remote
+```
+
+List all remote repositories (but with more detail)
+
+```
+git remote -v
+```
+
+Removes a link to a remote repository
+
+```
+git remote remove <remote_name>
+```
+
+Removes the link to the remote repository named
+"origin"
+
+```
+git remote remove origin
+```
+
+Configure your GitHub username so you can get
+access to your Github repository
+
+```
+git config --global credential.username <username>
+```
+
+Upload a branch of your git version history to your
+remote repository
+
+```
+git push <remote_name> <branch>
+```
+
+Shows a list of available branches
+
+```
+git branch
+```
+
+Shows the branches visually in the history
+
+```
+git log --all --graph
+```
+
+Upload the branch "main" to the remote repository
+named "origin"
+
+```
+git push origin main
+```
+
+Sets up a shortcut for this
+branch and remote repository
+git push origin main --set-upstream Next time you are on the main
+branch and you run git push, it
+will automatically push the
+main branch to origin
+
+```
+git push <remote_name> <branch> --set-upstream
+```
+
+Force-push the branch to the remote repository (it
+will overwrite what's on the remote repository)
+
+```
+git push <remote_name> <branch> -f
+```
